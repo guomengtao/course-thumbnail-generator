@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>视频课程封面生成器 V3</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="version-switcher">
+    <a href="/v1">基础版本</a>
+    <a href="/v2">高级版本</a>
+    <a href="/v3" class="active">科技版本</a>
+  </div>
+  
+  <div class="container">
+    <h1>视频课程封面生成器 V3</h1>
+    
+    <div class="controls">
+      <div>
+        <label>课程标题：</label>
+        <input type="text" id="title" placeholder="输入课程标题">
+      </div>
+      
+      <div>
+        <label>副标题：</label>
+        <input type="text" id="subtitle" placeholder="输入副标题（可选）">
+      </div>
+      
+      <div>
+        <label>经典配色方案：</label>
+        <div class="color-presets">
+          <div class="color-preset" style="background: #1e88e5" data-color="#1e88e5">科技蓝</div>
+          <div class="color-preset" style="background: #6200ea" data-color="#6200ea">深邃紫</div>
+          <div class="color-preset" style="background: #00c853" data-color="#00c853">活力绿</div>
+          <div class="color-preset" style="background: #2c3e50" data-color="#2c3e50">商务灰</div>
+          <div class="color-preset" style="background: #ff3d00" data-color="#ff3d00">激情红</div>
+          <div class="color-preset" style="background: #424242" data-color="#424242">深空黑</div>
+        </div>
+      </div>
+      
+      <div>
+        <label>科技背景样式：</label>
+        <div class="tech-pattern-select">
+          <div class="tech-pattern active" data-pattern="circuit">电路图案</div>
+          <div class="tech-pattern" data-pattern="grid">网格线条</div>
+          <div class="tech-pattern" data-pattern="dots">点阵效果</div>
+          <div class="tech-pattern" data-pattern="hex">六边形</div>
+        </div>
+      </div>
+      
+      <button onclick="generateThumbnail()">生成封面</button>
+      <button onclick="downloadThumbnail()">下载封面</button>
+    </div>
+    
+    <div class="canvas-container">
+      <canvas id="canvas" width="1280" height="720"></canvas>
+    </div>
+  </div>
+  
+  <script src="/js/main.js"></script>
+</body>
+</html> 

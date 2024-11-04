@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>视频课程封面生成器 V1</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="version-switcher">
+    <a href="/v1" class="active">基础版本</a>
+    <a href="/v2">高级版本</a>
+    <a href="/v3">科技版本</a>
+  </div>
+  
+  <div class="container">
+    <h1>视频课程封面生成器 V1</h1>
+    
+    <div class="controls">
+      <div>
+        <label>课程标题：</label>
+        <input type="text" id="title" placeholder="输入课程标题">
+      </div>
+      
+      <div>
+        <label>副标题：</label>
+        <input type="text" id="subtitle" placeholder="输入副标题（可选）">
+      </div>
+      
+      <div class="color-picker">
+        <label>背景颜色：</label>
+        <input type="color" id="bgColor" value="#007bff">
+      </div>
+      
+      <div class="color-picker">
+        <label>文字颜色：</label>
+        <input type="color" id="textColor" value="#ffffff">
+      </div>
+      
+      <button onclick="generateThumbnail()">生成封面</button>
+      <button onclick="downloadThumbnail()">下载封面</button>
+    </div>
+    
+    <div class="canvas-container">
+      <canvas id="canvas" width="1280" height="720"></canvas>
+    </div>
+  </div>
+  
+  <script src="/js/v1.js"></script>
+</body>
+</html> 
