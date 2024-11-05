@@ -1,4 +1,6 @@
+# Common Node.js files to ignore
 node_modules/
+dist/
+.env
 .DS_Store
-*.log
-.env 
+*.log 
